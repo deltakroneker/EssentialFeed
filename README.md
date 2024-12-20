@@ -1,0 +1,1 @@
+[![CI-macOS](https://github.com/deltakroneker/EssentialFeed/actions/workflows/CI-macOS.yml/badge.svg?event=push)](https://github.com/deltakroneker/EssentialFeed/actions/workflows/CI-macOS.yml)
