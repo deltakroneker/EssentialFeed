@@ -190,7 +190,7 @@ final class RemoteFeedLoaderTests: XCTestCase {
                 httpVersion: nil,
                 headerFields: nil
             )!
-            messages[index].completion(.succes(data, response))
+            messages[index].completion(.success(data, response))
         }
     }
 }
