@@ -1,11 +1,14 @@
 //
-//  Copyright © Essential Developer. All rights reserved.
+//  LocalFeedImage.swift
+//  EssentialFeed
+//
+//  Created by Nikola Milic on 9.1.25..
 //
 
 import Foundation
 
-public struct FeedImage: Equatable {
-	public let id: UUID
+public struct LocalFeedImage: Equatable {
+    public let id: UUID
     public let description: String?
     public let location: String?
     public let url: URL
