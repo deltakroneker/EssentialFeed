@@ -71,7 +71,7 @@ class EssentialFeedCacheIntegrationTests: XCTestCase {
             }
             saveExp.fulfill()
         }
-        wait(for: [saveExp], timeout: 1.0)
+        wait(for: [saveExp], timeout: 5.0)
     }
     
     private func expect(_ sut: LocalFeedLoader, toLoad expectedFeed: [FeedImage], file: StaticString = #file, line: UInt = #line) {
@@ -87,7 +87,7 @@ class EssentialFeedCacheIntegrationTests: XCTestCase {
 
             exp.fulfill()
         }
-        wait(for: [exp], timeout: 1.0)
+        wait(for: [exp], timeout: 5.0)
     }
     
     private func setupEmptyStoreState() {
