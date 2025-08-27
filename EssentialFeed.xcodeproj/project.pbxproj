@@ -39,6 +39,8 @@
 		D2A74E392E5EEADA00DC3480 /* UIRefreshControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A74E382E5EEADA00DC3480 /* UIRefreshControl+TestHelpers.swift */; };
 		D2A74E3B2E5EEAF900DC3480 /* UIButton+TestHelpers.swift.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A74E3A2E5EEAF800DC3480 /* UIButton+TestHelpers.swift.swift */; };
 		D2A74E3F2E5EEBAF00DC3480 /* UIControl+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A74E3E2E5EEBA900DC3480 /* UIControl+TestHelpers.swift */; };
+		D2A74E452E5EED3C00DC3480 /* FeedViewController+TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A74E442E5EED3C00DC3480 /* FeedViewController+TestHelpers.swift */; };
+		D2A74E472E5EED9200DC3480 /* FeedViewController+FakeRefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A74E462E5EED8B00DC3480 /* FeedViewController+FakeRefreshControl.swift */; };
 		D2B462232D3875C500BCFD74 /* FeedCachePolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2B462222D3875C500BCFD74 /* FeedCachePolicy.swift */; };
 		D2E4F0A12CFB6E5B0019E261 /* LoadFeedFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E4F0A02CFB6E5B0019E261 /* LoadFeedFromRemoteUseCaseTests.swift */; };
 		D2E4F0A42CFB76F30019E261 /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E4F0A32CFB76F30019E261 /* RemoteFeedLoader.swift */; };
@@ -154,6 +156,8 @@
 		D2A74E382E5EEADA00DC3480 /* UIRefreshControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIRefreshControl+TestHelpers.swift"; sourceTree = "<group>"; };
 		D2A74E3A2E5EEAF800DC3480 /* UIButton+TestHelpers.swift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+TestHelpers.swift.swift"; sourceTree = "<group>"; };
 		D2A74E3E2E5EEBA900DC3480 /* UIControl+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+TestHelpers.swift"; sourceTree = "<group>"; };
+		D2A74E442E5EED3C00DC3480 /* FeedViewController+TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewController+TestHelpers.swift"; sourceTree = "<group>"; };
+		D2A74E462E5EED8B00DC3480 /* FeedViewController+FakeRefreshControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FeedViewController+FakeRefreshControl.swift"; sourceTree = "<group>"; };
 		D2B462222D3875C500BCFD74 /* FeedCachePolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCachePolicy.swift; sourceTree = "<group>"; };
 		D2E4F0A02CFB6E5B0019E261 /* LoadFeedFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
 		D2E4F0A32CFB76F30019E261 /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
@@ -392,9 +396,19 @@
 		D2A74E422E5EEC2700DC3480 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D2A74E432E5EED1D00DC3480 /* Helpers */,
 				D2ECEB212E53C27F00BC0A58 /* FeedViewControllerTests.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D2A74E432E5EED1D00DC3480 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				D2A74E442E5EED3C00DC3480 /* FeedViewController+TestHelpers.swift */,
+				D2A74E462E5EED8B00DC3480 /* FeedViewController+FakeRefreshControl.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		D2E4F0A22CFB76D50019E261 /* Feed API */ = {
@@ -772,6 +786,8 @@
 			files = (
 				D2A74E3B2E5EEAF900DC3480 /* UIButton+TestHelpers.swift.swift in Sources */,
 				D2ECEB232E53C27F00BC0A58 /* FeedViewControllerTests.swift in Sources */,
+				D2A74E452E5EED3C00DC3480 /* FeedViewController+TestHelpers.swift in Sources */,
+				D2A74E472E5EED9200DC3480 /* FeedViewController+FakeRefreshControl.swift in Sources */,
 				D2A74E392E5EEADA00DC3480 /* UIRefreshControl+TestHelpers.swift in Sources */,
 				D2A74E3F2E5EEBAF00DC3480 /* UIControl+TestHelpers.swift in Sources */,
 				D2A74E362E5EEA8400DC3480 /* UIImage+TestHelpers.swift in Sources */,
