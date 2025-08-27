@@ -420,6 +420,24 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		D2A74E4E2E5EEF6300DC3480 /* Feed UI */ = {
+			isa = PBXGroup;
+			children = (
+				D2A74E402E5EEC1800DC3480 /* Controllers */,
+				D2A74E412E5EEC2000DC3480 /* Views */,
+			);
+			path = "Feed UI";
+			sourceTree = "<group>";
+		};
+		D2A74E4F2E5EEF8900DC3480 /* Feed UI */ = {
+			isa = PBXGroup;
+			children = (
+				D2A74E372E5EEA9D00DC3480 /* Helpers */,
+				D2A74E422E5EEC2700DC3480 /* Controllers */,
+			);
+			path = "Feed UI";
+			sourceTree = "<group>";
+		};
 		D2E4F0A22CFB76D50019E261 /* Feed API */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,8 +486,7 @@
 		D2ECEB1F2E53C25F00BC0A58 /* EssentialFeediOS */ = {
 			isa = PBXGroup;
 			children = (
-				D2A74E402E5EEC1800DC3480 /* Controllers */,
-				D2A74E412E5EEC2000DC3480 /* Views */,
+				D2A74E4E2E5EEF6300DC3480 /* Feed UI */,
 			);
 			path = EssentialFeediOS;
 			sourceTree = "<group>";
@@ -477,8 +494,7 @@
 		D2ECEB222E53C27F00BC0A58 /* EssentialFeediOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				D2A74E372E5EEA9D00DC3480 /* Helpers */,
-				D2A74E422E5EEC2700DC3480 /* Controllers */,
+				D2A74E4F2E5EEF8900DC3480 /* Feed UI */,
 			);
 			path = EssentialFeediOSTests;
 			sourceTree = "<group>";
