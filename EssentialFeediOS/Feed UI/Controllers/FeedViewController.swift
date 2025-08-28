@@ -15,6 +15,7 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
     }
     private var cellControllers = [IndexPath: FeedImageCellController]()
     private var viewAppeared = false
+    private var onViewIsAppearing: ((FeedViewController) -> Void)?
     
     convenience init(refreshController: FeedRefreshViewController) {
         self.init()
@@ -25,15 +26,17 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
         super.viewDidLoad()
         tableView.prefetchDataSource = self
         refreshControl = refreshController?.view
+        
+        onViewIsAppearing = { vc in
+            vc.onViewIsAppearing = nil
+            vc.refreshController?.refresh()
+        }
     }
     
     public override func viewIsAppearing(_ animated: Bool) {
         super.viewIsAppearing(animated)
         
-        if viewAppeared == false {
-            refreshController?.refresh()
-            viewAppeared = true
-        }
+        onViewIsAppearing?(self)
     }
     
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
