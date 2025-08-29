@@ -41,6 +41,8 @@ extension FeedViewController {
         })
         
         refreshControl = fake
-        refreshController?.view = fake
+        if let bindedFake = refreshController?.binded(fake) {
+            refreshController?.view = bindedFake
+        }
     }
 }
