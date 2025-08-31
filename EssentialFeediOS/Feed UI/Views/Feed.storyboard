@@ -77,6 +77,9 @@
                                                             <state key="normal" title="↻">
                                                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="retryButtonTapped" destination="RhO-gl-0b9" eventType="touchUpInside" id="mwM-cF-68i"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" red="0.8901960784313725" green="0.8901960784313725" blue="0.8901960784313725" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -118,6 +121,14 @@
                                         <constraint firstItem="9TH-fv-DzJ" firstAttribute="top" secondItem="0Ro-w1-YSZ" secondAttribute="topMargin" priority="999" constant="6" id="rBh-lq-uk1"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="descriptionLabel" destination="dd0-cA-Fwi" id="cmo-Rl-Ugb"/>
+                                    <outlet property="feedImageContainer" destination="POc-5e-LA0" id="WiV-kU-1ps"/>
+                                    <outlet property="feedImageRetryButton" destination="hgj-zi-OxM" id="hfT-m8-eUi"/>
+                                    <outlet property="feedImageView" destination="PFN-iy-V1r" id="QE2-Sr-oRA"/>
+                                    <outlet property="locationContainer" destination="VIL-9D-RET" id="fSh-Fq-Wd8"/>
+                                    <outlet property="locationLabel" destination="AHI-IS-LT8" id="zdS-av-jMv"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
