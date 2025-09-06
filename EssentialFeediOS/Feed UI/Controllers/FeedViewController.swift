@@ -11,13 +11,13 @@ protocol FeedViewControllerDelegate {
     func didRequestFeedRefresh()
 }
 
-public final class FeedViewController: UITableViewController, UITableViewDataSourcePrefetching, FeedLoadingView {
+public final class FeedViewController: UITableViewController, UITableViewDataSourcePrefetching, FeedLoadingView, FeedErrorView {
     var delegate: FeedViewControllerDelegate?
+    @IBOutlet private(set) public var errorView: ErrorView?
+    
     var tableModel = [FeedImageCellController]() {
         didSet { tableView.reloadData() }
     }
-    private var cellControllers = [IndexPath: FeedImageCellController]()
-    private var viewAppeared = false
     private var onViewIsAppearing: ((FeedViewController) -> Void)?
     
     public override func viewDidLoad() {
@@ -40,17 +40,17 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
     }
     
     func display(_ viewModel: FeedLoadingViewModel) {
-        if viewModel.isLoading {
-            refreshControl?.beginRefreshing()
-        } else {
-            refreshControl?.endRefreshing()
-        }
+        refreshControl?.update(isRefreshing: viewModel.isLoading)
+    }
+    
+    func display(_ viewModel: FeedErrorViewModel) {
+        errorView?.message = viewModel.message
     }
     
     public override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tableModel.count
     }
-
+    
     public override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         return cellController(forRowAt: indexPath).view(in: tableView)
     }
@@ -68,7 +68,7 @@ public final class FeedViewController: UITableViewController, UITableViewDataSou
     public func tableView(_ tableView: UITableView, cancelPrefetchingForRowsAt indexPaths: [IndexPath]) {
         indexPaths.forEach(cancelCellControllerLoad)
     }
-
+    
     private func cellController(forRowAt indexPath: IndexPath) -> FeedImageCellController {
         return tableModel[indexPath.row]
     }
