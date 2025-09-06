@@ -19,38 +19,26 @@
                             <rect key="frame" x="0.0" y="0.0" width="393" height="34"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UN-8x-DBf">
-                                    <rect key="frame" x="175" y="6" width="42" height="21"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UN-8x-DBf">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="34"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5n2-Z5-FeI">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="34"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <inset key="contentEdgeInsets" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
-                                    <state key="normal" title="Error label">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                </button>
                             </subviews>
                             <color key="backgroundColor" red="0.99951404330000004" green="0.41759261489999999" blue="0.4154433012" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <gestureRecognizers/>
                             <constraints>
-                                <constraint firstAttribute="bottom" secondItem="5n2-Z5-FeI" secondAttribute="bottom" id="IRW-E3-I1j"/>
-                                <constraint firstAttribute="trailing" secondItem="5n2-Z5-FeI" secondAttribute="trailing" id="L4t-NK-Gps"/>
-                                <constraint firstItem="5n2-Z5-FeI" firstAttribute="leading" secondItem="DAt-y0-CdJ" secondAttribute="leading" id="Lsp-TO-lkt"/>
+                                <constraint firstAttribute="bottom" secondItem="1UN-8x-DBf" secondAttribute="bottom" id="4WB-Pt-EGt"/>
                                 <constraint firstItem="1UN-8x-DBf" firstAttribute="centerY" secondItem="DAt-y0-CdJ" secondAttribute="centerY" id="Syn-ml-VbQ"/>
-                                <constraint firstItem="5n2-Z5-FeI" firstAttribute="top" secondItem="DAt-y0-CdJ" secondAttribute="top" id="Tb3-wh-qrS"/>
+                                <constraint firstAttribute="trailing" secondItem="1UN-8x-DBf" secondAttribute="trailing" id="XNx-Kt-CdB"/>
                                 <constraint firstItem="1UN-8x-DBf" firstAttribute="centerX" secondItem="DAt-y0-CdJ" secondAttribute="centerX" id="YEO-kS-ndI"/>
+                                <constraint firstItem="1UN-8x-DBf" firstAttribute="top" secondItem="DAt-y0-CdJ" secondAttribute="top" id="bLN-g8-RMO"/>
+                                <constraint firstItem="1UN-8x-DBf" firstAttribute="leading" secondItem="DAt-y0-CdJ" secondAttribute="leading" id="cBY-Jt-ffI"/>
                             </constraints>
-                            <variation key="default">
-                                <mask key="subviews">
-                                    <exclude reference="5n2-Z5-FeI"/>
-                                </mask>
-                            </variation>
                             <connections>
                                 <outlet property="label" destination="1UN-8x-DBf" id="FbX-XF-Ytz"/>
+                                <outletCollection property="gestureRecognizers" destination="Fkr-ED-CUs" appends="YES" id="5a7-kK-bjp"/>
                             </connections>
                         </view>
                         <view key="tableFooterView" contentMode="scaleToFill" id="wOF-Rk-Ng7">
@@ -182,6 +170,11 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ccD-jy-O5g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Fkr-ED-CUs">
+                    <connections>
+                        <action selector="hideMessageAnimated" destination="DAt-y0-CdJ" id="WCM-T7-qX4"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1856" y="-231"/>
         </scene>
