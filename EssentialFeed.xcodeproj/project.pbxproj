@@ -437,6 +437,7 @@
 		D2A2F7A82E6C149E003E5004 /* Feed Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				D2A74EB82E64CA8A00DC3480 /* FeedLocalizationTests.swift */,
 				D2A2F7A92E6C14B5003E5004 /* FeedPresenterTests.swift */,
 			);
 			path = "Feed Presentation";
@@ -541,14 +542,6 @@
 			path = "Feed Presentation";
 			sourceTree = "<group>";
 		};
-		D2A74EB52E64CA7E00DC3480 /* Feed Presentation */ = {
-			isa = PBXGroup;
-			children = (
-				D2A74EB82E64CA8A00DC3480 /* FeedLocalizationTests.swift */,
-			);
-			path = "Feed Presentation";
-			sourceTree = "<group>";
-		};
 		D2E4F0A22CFB76D50019E261 /* Feed API */ = {
 			isa = PBXGroup;
 			children = (
@@ -607,7 +600,6 @@
 		D2ECEB222E53C27F00BC0A58 /* EssentialFeediOSTests */ = {
 			isa = PBXGroup;
 			children = (
-				D2A74EB52E64CA7E00DC3480 /* Feed Presentation */,
 				D2A74E4F2E5EEF8900DC3480 /* Feed UI */,
 			);
 			path = EssentialFeediOSTests;
