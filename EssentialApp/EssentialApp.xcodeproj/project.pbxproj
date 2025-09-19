@@ -44,6 +44,7 @@
 		D262C9792E7D53DA0044465C /* EssentialApp.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = EssentialApp.xctestplan; sourceTree = "<group>"; };
 		D2A2F7EE2E796D11003E5004 /* EssentialApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EssentialApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A2F8042E796D12003E5004 /* EssentialAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EssentialAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D2C40F942E7D84B500E036E7 /* CI_iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = CI_iOS.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -104,6 +105,7 @@
 		D2A2F7E52E796D11003E5004 = {
 			isa = PBXGroup;
 			children = (
+				D2C40F942E7D84B500E036E7 /* CI_iOS.xctestplan */,
 				D262C9792E7D53DA0044465C /* EssentialApp.xctestplan */,
 				D2A2F7F02E796D11003E5004 /* EssentialApp */,
 				D2A2F8072E796D12003E5004 /* EssentialAppTests */,
