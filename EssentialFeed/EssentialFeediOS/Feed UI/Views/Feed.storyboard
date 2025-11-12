@@ -30,9 +30,7 @@
                             <gestureRecognizers/>
                             <constraints>
                                 <constraint firstAttribute="bottom" secondItem="1UN-8x-DBf" secondAttribute="bottom" id="4WB-Pt-EGt"/>
-                                <constraint firstItem="1UN-8x-DBf" firstAttribute="centerY" secondItem="DAt-y0-CdJ" secondAttribute="centerY" id="Syn-ml-VbQ"/>
                                 <constraint firstAttribute="trailing" secondItem="1UN-8x-DBf" secondAttribute="trailing" id="XNx-Kt-CdB"/>
-                                <constraint firstItem="1UN-8x-DBf" firstAttribute="centerX" secondItem="DAt-y0-CdJ" secondAttribute="centerX" id="YEO-kS-ndI"/>
                                 <constraint firstItem="1UN-8x-DBf" firstAttribute="top" secondItem="DAt-y0-CdJ" secondAttribute="top" id="bLN-g8-RMO"/>
                                 <constraint firstItem="1UN-8x-DBf" firstAttribute="leading" secondItem="DAt-y0-CdJ" secondAttribute="leading" id="cBY-Jt-ffI"/>
                             </constraints>
