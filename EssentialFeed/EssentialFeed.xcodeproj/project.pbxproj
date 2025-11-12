@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -232,6 +232,10 @@
 		D2F3C7C92E0EEF7000FA571A /* FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedStoreSpecs.swift; sourceTree = "<group>"; };
 		D2F3C7CB2E0EEFB700FA571A /* XCTestCase+FeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FeedStoreSpecs.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		D2C506DD2EC4B228007E8513 /* Helpers */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Helpers; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		080EDEEE21B6DA7E00813479 /* Frameworks */ = {
@@ -576,6 +580,7 @@
 		D2ECEB222E53C27F00BC0A58 /* EssentialFeediOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				D2C506DD2EC4B228007E8513 /* Helpers */,
 				D2C506DB2EC4A7A5007E8513 /* FeedSnapshotTests.swift */,
 			);
 			path = EssentialFeediOSTests;
@@ -691,6 +696,9 @@
 			);
 			dependencies = (
 				D22022362E49E23300C319EE /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D2C506DD2EC4B228007E8513 /* Helpers */,
 			);
 			name = EssentialFeediOSTests;
 			packageProductDependencies = (
