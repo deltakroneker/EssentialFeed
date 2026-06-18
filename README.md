@@ -1,6 +1,7 @@
 # Essential Feed App – Image Feed Feature
 
 [![CI-iOS](https://github.com/deltakroneker/EssentialFeed/actions/workflows/CI-iOS.yml/badge.svg)](https://github.com/deltakroneker/EssentialFeed/actions/workflows/CI-iOS.yml)
+[![Deploy](https://github.com/deltakroneker/EssentialFeed/actions/workflows/Deploy.yml/badge.svg)](https://github.com/deltakroneker/EssentialFeed/actions/workflows/Deploy.yml)
 
 ## BDD Specs
 
