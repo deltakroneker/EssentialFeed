@@ -75,6 +75,8 @@
 		D2DC206F304F09B2002F7414 /* ImageCommentsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DC206E304F09B2002F7414 /* ImageCommentsMapper.swift */; };
 		D2DC2071304F0A0C002F7414 /* LoadImageCommentsFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DC2070304F0A0C002F7414 /* LoadImageCommentsFromRemoteUseCaseTests.swift */; };
 		D2DC2074304F0B69002F7414 /* ImageComment.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DC2073304F0B69002F7414 /* ImageComment.swift */; };
+		D2DC207E304F0E45002F7414 /* RemoteLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DC207D304F0E45002F7414 /* RemoteLoader.swift */; };
+		D2DC2080304F0E6E002F7414 /* RemoteLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2DC207F304F0E6E002F7414 /* RemoteLoaderTests.swift */; };
 		D2E4F0A12CFB6E5B0019E261 /* LoadFeedFromRemoteUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E4F0A02CFB6E5B0019E261 /* LoadFeedFromRemoteUseCaseTests.swift */; };
 		D2E4F0A42CFB76F30019E261 /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E4F0A32CFB76F30019E261 /* RemoteFeedLoader.swift */; };
 		D2E4F0A62CFE55760019E261 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2E4F0A52CFE55760019E261 /* HTTPClient.swift */; };
@@ -210,6 +212,8 @@
 		D2DC206E304F09B2002F7414 /* ImageCommentsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCommentsMapper.swift; sourceTree = "<group>"; };
 		D2DC2070304F0A0C002F7414 /* LoadImageCommentsFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadImageCommentsFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
 		D2DC2073304F0B69002F7414 /* ImageComment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageComment.swift; sourceTree = "<group>"; };
+		D2DC207D304F0E45002F7414 /* RemoteLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteLoader.swift; sourceTree = "<group>"; };
+		D2DC207F304F0E6E002F7414 /* RemoteLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteLoaderTests.swift; sourceTree = "<group>"; };
 		D2E4F0A02CFB6E5B0019E261 /* LoadFeedFromRemoteUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedFromRemoteUseCaseTests.swift; sourceTree = "<group>"; };
 		D2E4F0A32CFB76F30019E261 /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
 		D2E4F0A52CFE55760019E261 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
@@ -531,6 +535,7 @@
 		D2DC2076304F0C1E002F7414 /* Shared API */ = {
 			isa = PBXGroup;
 			children = (
+				D2DC207D304F0E45002F7414 /* RemoteLoader.swift */,
 				D2E4F0A52CFE55760019E261 /* HTTPClient.swift */,
 			);
 			path = "Shared API";
@@ -548,6 +553,7 @@
 		D2DC2078304F0C5F002F7414 /* Shared API */ = {
 			isa = PBXGroup;
 			children = (
+				D2DC207F304F0E6E002F7414 /* RemoteLoaderTests.swift */,
 				D2DC2079304F0C67002F7414 /* Helpers */,
 			);
 			path = "Shared API";
@@ -918,6 +924,7 @@
 				080EDF0C21B6DAE800813479 /* FeedItem.swift in Sources */,
 				D2C40FC82E813D4300E036E7 /* FeedImageDataCache.swift in Sources */,
 				D2A2F7D42E7800AD003E5004 /* FeedImageDataStore.swift in Sources */,
+				D2DC207E304F0E45002F7414 /* RemoteLoader.swift in Sources */,
 				D2A2F7B22E6C1AB4003E5004 /* FeedPresenter.swift in Sources */,
 				D2E91D652D159AF200EFE4A2 /* URLSessionHTTPClient.swift in Sources */,
 				D2A2F7CE2E7739B2003E5004 /* HTTPURLResponse+StatusCode.swift in Sources */,
@@ -954,6 +961,7 @@
 				D2A2F7D92E78055A003E5004 /* FeedImageDataStoreSpy.swift in Sources */,
 				D213E1962E40B3CC00603FC9 /* XCTestCase+FailableDeleteFeedStoreSpecs.swift in Sources */,
 				D213E1922E40B1E700603FC9 /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift in Sources */,
+				D2DC2080304F0E6E002F7414 /* RemoteLoaderTests.swift in Sources */,
 				D2A2F7AA2E6C14B5003E5004 /* FeedPresenterTests.swift in Sources */,
 				D2441C452D368D3600D52410 /* SharedTestHelpers.swift in Sources */,
 				D2DC2071304F0A0C002F7414 /* LoadImageCommentsFromRemoteUseCaseTests.swift in Sources */,
