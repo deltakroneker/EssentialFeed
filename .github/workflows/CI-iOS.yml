@@ -24,26 +24,6 @@ jobs:
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_16.4.app
       
-    - name: Debug Xcode and Simulators
-      run: |
-        echo "=== Xcode ==="
-        xcodebuild -version
-
-        echo "=== Xcode path ==="
-        xcode-select -p
-
-        echo "=== SDKs ==="
-        xcodebuild -showsdks
-
-        echo "=== Runtimes ==="
-        xcrun simctl list runtimes
-
-        echo "=== Devices ==="
-        xcrun simctl list devices available
-
-        echo "=== xctrace devices ==="
-        xcrun xctrace list devices
-          
     - name: Xcode version
       run: /usr/bin/xcodebuild -version
       
