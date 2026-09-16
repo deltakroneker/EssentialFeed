@@ -326,7 +326,6 @@
 			children = (
 				080EDF0121B6DA7E00813479 /* Info.plist */,
 				D2E91D612D158B9E00EFE4A2 /* Helpers */,
-				D2DC2078304F0C5F002F7414 /* Shared API */,
 				D2DC2077304F0C53002F7414 /* Shared API Infra */,
 				D2DC207C304F0CEC002F7414 /* Image Comments API */,
 				D2441C2E2D27F0C200D52410 /* Feed Cache */,
@@ -534,21 +533,6 @@
 				D2E4F0AA2D0F11450019E261 /* URLSessionHTTPClientTests.swift */,
 			);
 			path = "Shared API Infra";
-			sourceTree = "<group>";
-		};
-		D2DC2078304F0C5F002F7414 /* Shared API */ = {
-			isa = PBXGroup;
-			children = (
-				D2DC2079304F0C67002F7414 /* Helpers */,
-			);
-			path = "Shared API";
-			sourceTree = "<group>";
-		};
-		D2DC2079304F0C67002F7414 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		D2DC207A304F0C6E002F7414 /* Helpers */ = {
