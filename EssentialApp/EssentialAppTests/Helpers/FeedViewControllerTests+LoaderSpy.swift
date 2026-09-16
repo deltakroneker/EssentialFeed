@@ -8,26 +8,33 @@
 import Foundation
 import EssentialFeed
 import EssentialFeediOS
+import Combine
 
 extension FeedUIIntegrationTests {
-    class LoaderSpy: FeedLoader, FeedImageDataLoader {
-        private var feedRequests = [(FeedLoader.Result) -> Void]()
+    
+    class LoaderSpy: FeedImageDataLoader {
+        
+        // MARK: - FeedLoader
+        
+        private var feedRequests = [PassthroughSubject<[FeedImage], Error>]()
         
         var loadFeedCallCount: Int {
             return feedRequests.count
         }
         
-        func load(completion: @escaping (FeedLoader.Result) -> Void) {
-            feedRequests.append(completion)
+        func loadPublisher() -> AnyPublisher<[FeedImage], Error> {
+            let publisher = PassthroughSubject<[FeedImage], Error>()
+            feedRequests.append(publisher)
+            return publisher.eraseToAnyPublisher()
         }
         
         func completeFeedLoading(with feed: [FeedImage] = [], at index: Int = 0) {
-            feedRequests[index](.success(feed))
+            feedRequests[index].send(feed)
         }
         
         func completeFeedLoadingWithError(at index: Int = 0) {
             let error = NSError(domain: "an error", code: 0)
-            feedRequests[index](.failure(error))
+            feedRequests[index].send(completion: .failure(error))
         }
         
         // MARK: - FeedImageDataLoader
@@ -44,6 +51,7 @@ extension FeedUIIntegrationTests {
         var loadedImageURLs: [URL] {
             return imageRequests.map { $0.url }
         }
+        
         private(set) var cancelledImageURLs = [URL]()
         
         func loadImageData(from url: URL, completion: @escaping (FeedImageDataLoader.Result) -> Void) -> FeedImageDataLoaderTask {
@@ -60,4 +68,5 @@ extension FeedUIIntegrationTests {
             imageRequests[index].completion(.failure(error))
         }
     }
+    
 }
