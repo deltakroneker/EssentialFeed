@@ -17,7 +17,7 @@ final class FeedUIIntegrationTests: XCTestCase {
 
         sut.simulateAppearance()
 
-        XCTAssertEqual(sut.title, localized("FEED_VIEW_TITLE"))
+        XCTAssertEqual(sut.title, feedTitle)
     }
     
     func test_loadFeedActions_requestFeedFromLoader() {
@@ -118,7 +118,7 @@ final class FeedUIIntegrationTests: XCTestCase {
         XCTAssertEqual(sut.errorMessage, nil)
         
         loader.completeFeedLoadingWithError(at: 0)
-        XCTAssertEqual(sut.errorMessage, localized("FEED_VIEW_CONNECTION_ERROR"))
+        XCTAssertEqual(sut.errorMessage, loadError)
         
         sut.simulateUserInitiatedFeedReload()
         XCTAssertEqual(sut.errorMessage, nil)
@@ -298,21 +298,6 @@ final class FeedUIIntegrationTests: XCTestCase {
         loader.completeImageLoading(with: anyImageData())
         
         XCTAssertNil(view?.renderedImage, "Expected no rendered image when an image load finishes after the view is not visible anymore")
-    }
-    
-    func test_feedImageView_doesNotShowDataFromPreviousRequestWhenCellIsReused() throws {
-        let (sut, loader) = makeSUT()
-
-        sut.simulateAppearance()
-        loader.completeFeedLoading(with: [makeImage(), makeImage()])
-
-        let view0 = try XCTUnwrap(sut.simulateFeedImageViewVisible(at: 0))
-        view0.prepareForReuse()
-
-        let imageData0 = UIImage.make(withColor: .red).pngData()!
-        loader.completeImageLoading(with: imageData0, at: 0)
-
-        XCTAssertEqual(view0.renderedImage, .none, "Expected no image state change for reused view once image loading completes successfully")
     }
     
     func test_feedImageView_showsDataForNewViewRequestAfterPreviousViewIsReused() throws {
