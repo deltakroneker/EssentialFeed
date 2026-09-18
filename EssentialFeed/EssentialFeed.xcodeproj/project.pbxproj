@@ -11,6 +11,8 @@
 		080EDF0C21B6DAE800813479 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 080EDF0B21B6DAE800813479 /* FeedItem.swift */; };
 		ADACA8C9305D545B007CB3F8 /* LoadResourcePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACA8C8305D545B007CB3F8 /* LoadResourcePresenter.swift */; };
 		ADACA8CC305D5476007CB3F8 /* LoadResourcePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACA8CB305D5476007CB3F8 /* LoadResourcePresenterTests.swift */; };
+		ADACA8D1305D581A007CB3F8 /* Shared.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADACA8CF305D581A007CB3F8 /* Shared.strings */; };
+		ADACA8D5305D58D4007CB3F8 /* SharedLocalizationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADACA8D4305D58D4007CB3F8 /* SharedLocalizationTests.swift */; };
 		D213E1922E40B1E700603FC9 /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D213E1912E40B1E200603FC9 /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift */; };
 		D213E1942E40B26700603FC9 /* XCTestCase+FailableInsertFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D213E1932E40B26400603FC9 /* XCTestCase+FailableInsertFeedStoreSpecs.swift */; };
 		D213E1962E40B3CC00603FC9 /* XCTestCase+FailableDeleteFeedStoreSpecs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D213E1952E40B3CA00603FC9 /* XCTestCase+FailableDeleteFeedStoreSpecs.swift */; };
@@ -139,6 +141,10 @@
 		080EDF0B21B6DAE800813479 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		ADACA8C8305D545B007CB3F8 /* LoadResourcePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadResourcePresenter.swift; sourceTree = "<group>"; };
 		ADACA8CB305D5476007CB3F8 /* LoadResourcePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadResourcePresenterTests.swift; sourceTree = "<group>"; };
+		ADACA8D0305D581A007CB3F8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Shared.strings; sourceTree = "<group>"; };
+		ADACA8D2305D5837007CB3F8 /* el */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = el; path = el.lproj/Shared.strings; sourceTree = "<group>"; };
+		ADACA8D3305D5838007CB3F8 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/Shared.strings"; sourceTree = "<group>"; };
+		ADACA8D4305D58D4007CB3F8 /* SharedLocalizationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedLocalizationTests.swift; sourceTree = "<group>"; };
 		D213E1912E40B1E200603FC9 /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FailableRetrieveFeedStoreSpecs.swift"; sourceTree = "<group>"; };
 		D213E1932E40B26400603FC9 /* XCTestCase+FailableInsertFeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FailableInsertFeedStoreSpecs.swift"; sourceTree = "<group>"; };
 		D213E1952E40B3CA00603FC9 /* XCTestCase+FailableDeleteFeedStoreSpecs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestCase+FailableDeleteFeedStoreSpecs.swift"; sourceTree = "<group>"; };
@@ -356,6 +362,7 @@
 			isa = PBXGroup;
 			children = (
 				ADACA8C8305D545B007CB3F8 /* LoadResourcePresenter.swift */,
+				ADACA8CF305D581A007CB3F8 /* Shared.strings */,
 			);
 			path = "Shared Presentation";
 			sourceTree = "<group>";
@@ -363,6 +370,7 @@
 		ADACA8CA305D546F007CB3F8 /* Shared Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				ADACA8D4305D58D4007CB3F8 /* SharedLocalizationTests.swift */,
 				ADACA8CB305D5476007CB3F8 /* LoadResourcePresenterTests.swift */,
 			);
 			path = "Shared Presentation";
@@ -845,6 +853,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D2A2F7B32E6C1B20003E5004 /* Feed.strings in Resources */,
+				ADACA8D1305D581A007CB3F8 /* Shared.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -943,6 +952,7 @@
 				D2441C302D27F0CF00D52410 /* CacheFeedUseCaseTests.swift in Sources */,
 				D2441C3B2D301CAD00D52410 /* LoadFeedFromCacheUseCaseTests.swift in Sources */,
 				D2A2F7D92E78055A003E5004 /* FeedImageDataStoreSpy.swift in Sources */,
+				ADACA8D5305D58D4007CB3F8 /* SharedLocalizationTests.swift in Sources */,
 				D213E1962E40B3CC00603FC9 /* XCTestCase+FailableDeleteFeedStoreSpecs.swift in Sources */,
 				D213E1922E40B1E700603FC9 /* XCTestCase+FailableRetrieveFeedStoreSpecs.swift in Sources */,
 				D2A2F7AA2E6C14B5003E5004 /* FeedPresenterTests.swift in Sources */,
@@ -1038,6 +1048,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		ADACA8CF305D581A007CB3F8 /* Shared.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ADACA8D0305D581A007CB3F8 /* en */,
+				ADACA8D2305D5837007CB3F8 /* el */,
+				ADACA8D3305D5838007CB3F8 /* pt-BR */,
+			);
+			name = Shared.strings;
+			sourceTree = "<group>";
+		};
 		D2A2F7AE2E6C1810003E5004 /* Feed.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
