@@ -247,6 +247,7 @@
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		ADACA95930616C79007CB3F8 /* Feed UI */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Feed UI"; sourceTree = "<group>"; };
+		ADACA97830617345007CB3F8 /* Shared UI */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = "Shared UI"; sourceTree = "<group>"; };
 		D2C506DD2EC4B228007E8513 /* Helpers */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = Helpers; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
@@ -716,6 +717,7 @@
 		D2ECEB222E53C27F00BC0A58 /* EssentialFeediOSTests */ = {
 			isa = PBXGroup;
 			children = (
+				ADACA97830617345007CB3F8 /* Shared UI */,
 				D2C506DD2EC4B228007E8513 /* Helpers */,
 				ADACA95930616C79007CB3F8 /* Feed UI */,
 			);
@@ -834,6 +836,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				ADACA95930616C79007CB3F8 /* Feed UI */,
+				ADACA97830617345007CB3F8 /* Shared UI */,
 				D2C506DD2EC4B228007E8513 /* Helpers */,
 			);
 			name = EssentialFeediOSTests;
