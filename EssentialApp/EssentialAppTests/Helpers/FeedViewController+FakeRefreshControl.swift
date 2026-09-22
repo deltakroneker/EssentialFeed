@@ -21,7 +21,7 @@ private class FakeRefreshControl: UIRefreshControl {
     }
 }
 
-extension FeedViewController {
+extension ListViewController {
     func simulateAppearance() {
         if !isViewLoaded {
             loadViewIfNeeded()
