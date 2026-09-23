@@ -17,13 +17,26 @@ public final class ListViewController: UITableViewController, UITableViewDataSou
         }
     }()
 
+    private var onViewIsAppearing: ((ListViewController) -> Void)?
+    
     public var onRefresh: (() -> Void)?
     
     public override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureTraitCollectionObservers()
         configureTableView()
-        refresh()
+        
+        onViewIsAppearing = { vc in
+            vc.onViewIsAppearing = nil
+            vc.refresh()
+        }
+    }
+    
+    public override func viewIsAppearing(_ animated: Bool) {
+        super.viewIsAppearing(animated)
+        
+        onViewIsAppearing?(self)
     }
     
     private func configureTableView() {
@@ -38,16 +51,18 @@ public final class ListViewController: UITableViewController, UITableViewDataSou
         }
     }
     
+    private func configureTraitCollectionObservers() {
+        registerForTraitChanges(
+            [UITraitPreferredContentSizeCategory.self]
+        ) { (self: Self, previous: UITraitCollection) in
+            self.tableView.reloadData()
+        }
+    }
+    
     public override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
 
         tableView.sizeTableHeaderToFit()
-    }
-    
-    public override func traitCollectionDidChange(_ previous: UITraitCollection?) {
-        if previous?.preferredContentSizeCategory != traitCollection.preferredContentSizeCategory {
-            tableView.reloadData()
-        }
     }
     
     @IBAction private func refresh() {
@@ -58,7 +73,11 @@ public final class ListViewController: UITableViewController, UITableViewDataSou
         var snapshot = NSDiffableDataSourceSnapshot<Int, CellController>()
         snapshot.appendSections([0])
         snapshot.appendItems(cellControllers, toSection: 0)
-        dataSource.apply(snapshot)
+        if #available(iOS 15.0, *) {
+          dataSource.applySnapshotUsingReloadData(snapshot)
+        } else {
+          dataSource.apply(snapshot)
+        }
     }
 
     public func display(_ viewModel: ResourceLoadingViewModel) {

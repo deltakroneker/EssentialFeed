@@ -8,27 +8,23 @@
 import UIKit
 import EssentialFeediOS
 
-private class FakeRefreshControl: UIRefreshControl {
-    private var _isRefreshing = false
-    override var isRefreshing: Bool { _isRefreshing }
-    
-    override func beginRefreshing() {
-        _isRefreshing = true
-    }
-    
-    override func endRefreshing() {
-        _isRefreshing = false
-    }
-}
-
 extension ListViewController {
     func simulateAppearance() {
         if !isViewLoaded {
             loadViewIfNeeded()
-            replaceRefreshControlWithFakeForiOS17Support()
+            prepareForFirstAppearance()
         }
         beginAppearanceTransition(true, animated: false)
         endAppearanceTransition()
+    }
+    
+    private func prepareForFirstAppearance() {
+        setSmallFrameToPreventRenderingCells()
+        replaceRefreshControlWithFakeForiOS17Support()
+    }
+    
+    private func setSmallFrameToPreventRenderingCells() {
+        tableView.frame = CGRect(x: 0, y: 0, width: 390, height: 1)
     }
     
     func replaceRefreshControlWithFakeForiOS17Support() {
@@ -42,4 +38,18 @@ extension ListViewController {
         
         refreshControl = fake
     }
+    
+    private class FakeRefreshControl: UIRefreshControl {
+        private var _isRefreshing = false
+        override var isRefreshing: Bool { _isRefreshing }
+        
+        override func beginRefreshing() {
+            _isRefreshing = true
+        }
+        
+        override func endRefreshing() {
+            _isRefreshing = false
+        }
+    }
+
 }
