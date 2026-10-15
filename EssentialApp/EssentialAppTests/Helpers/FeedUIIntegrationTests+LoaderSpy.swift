@@ -1,5 +1,5 @@
 //
-//  FeedViewControllerTests+LoaderSpy.swift
+//  FeedUIIntegrationTests+LoaderSpy.swift
 //  EssentialFeed
 //
 //  Created by Nikola Milic on 27.8.25..
@@ -36,6 +36,7 @@ extension FeedUIIntegrationTests {
             feedRequests[index].send(Paginated(items: feed, loadMorePublisher: { [weak self] in
                 self?.loadMorePublisher() ?? Empty().eraseToAnyPublisher()
             }))
+            feedRequests[index].send(completion: .finished)
         }
         
         // MARK: - LoadMoreFeedLoader
