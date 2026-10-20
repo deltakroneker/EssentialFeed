@@ -148,6 +148,7 @@ class FeedUIIntegrationTests: XCTestCase {
             exp.fulfill()
         }
         wait(for: [exp], timeout: 1.0)
+        RunLoop.current.run(until: Date()+1)
     }
     
     func test_loadFeedCompletion_rendersErrorMessageOnErrorUntilNextReload() {
